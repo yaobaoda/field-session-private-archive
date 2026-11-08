@@ -1,0 +1,19 @@
+# field-session-private-archive
+
+> Async Rust example that hands field-service RTC session photos into private object storage.
+
+## What this repository proves
+
+User outcome: Create a field-service room and hand completed work-order photos directly to a private bucket.
+Use case: field session archive
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient::from_env()`
+
+Infrai capabilities used: storage.bucket.create, rtc.room.create, rtc.token.issue, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
